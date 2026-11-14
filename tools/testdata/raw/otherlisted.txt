@@ -1,0 +1,10 @@
+ACT Symbol|Security Name|Exchange|CQS Symbol|ETF|Round Lot Size|Test Issue|NASDAQ Symbol
+BRK.B|Berkshire Hathaway Inc. New Common Stock|N|BRK.B|N|100|N|BRK.B
+BTC|Grayscale Bitcoin Mini Trust (BTC)|P|BTC|Y|100|N|BTC
+SPY|State Street SPDR S&P 500 ETF Trust|P|SPY|Y|100|N|SPY
+TSM|Taiwan Semiconductor Manufacturing Company Ltd.|N|TSM|N|100|N|TSM
+TX|Ternium S.A. Ternium S.A. American Depositary Shares|N|TX|N|100|N|TX
+EXA.W|Example Holdings Redeemable warrants, each exercisable for one share|N|EXA.WS|N|100|N|EXA+
+EXB.A|Example Energy American Depositary Shares representing Preferred Shares|N|EXB.A|N|100|N|EXB.A
+EXC$D|Example Realty 6.5% Series D Cumulative Preferred Stock|N|EXCpD|N|100|N|EXC-D
+File Creation Time: 0101200000:00||||||

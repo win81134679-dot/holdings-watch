@@ -1,0 +1,19 @@
+*.iml
+.gradle/
+.kotlin/
+build/
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+/.idea/
+.DS_Store
+
+# Signing material never enters the repo.
+*.jks
+*.keystore
+keystore.properties
+signing/
+
+# The impeccable design hook writes this cache next to edited UI files.
+.impeccable/

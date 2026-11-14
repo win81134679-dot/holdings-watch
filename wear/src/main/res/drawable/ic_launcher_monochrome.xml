@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 主題圖示（Material You 單色）用：同一份幾何，單色由系統上色。 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="M54,24A30,30 0,0 1,82 64"
+        android:strokeWidth="5"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M44,44L44,72"
+        android:strokeWidth="2.5"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M41,52h6a1.5,1.5 0,0 1,1.5 1.5v11a1.5,1.5 0,0 1,-1.5 1.5h-6a1.5,1.5 0,0 1,-1.5 -1.5v-11a1.5,1.5 0,0 1,1.5 -1.5z" />
+    <path
+        android:pathData="M62,36L62,66"
+        android:strokeWidth="2.5"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M59,40h6a1.5,1.5 0,0 1,1.5 1.5v15a1.5,1.5 0,0 1,-1.5 1.5h-6a1.5,1.5 0,0 1,-1.5 -1.5v-15a1.5,1.5 0,0 1,1.5 -1.5z" />
+</vector>
