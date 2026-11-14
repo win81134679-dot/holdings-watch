@@ -58,7 +58,7 @@ $env:JAVA_HOME="C:\Program Files\Android\Android Studio\jbr"; $env:ANDROID_HOME=
 - **手錶要先用 adb 開一次安裝權限**，Wear OS 沒有「安裝不明應用程式」的設定頁（實測：設定頁的 intent 只開到設定首頁）：
   `adb -s <手錶> shell appops set tw.personal.holdings REQUEST_INSTALL_PACKAGES allow`。開了之後手錶不用按任何東西就會更新完（實測 0.2→0.2.1-test）。
 - 手機第一次要使用者在系統設定允許「持股看板」安裝應用程式；App 會帶過去。
-- Data Layer 傳檔實測約 150 KB/s：30 MB 的手錶 APK 要 3 分多鐘。
+- Data Layer 傳檔實測約 150 KB/s。release 從 0.2.1 起開 R8（根目錄 `build.gradle.kts`）：手機 APK 27.3 → 3.7 MB、手錶 30.0 → 3.1 MB；沒開時手錶 APK 要傳 3 分多鐘。
 - debug 廣播（`-p tw.personal.holdings`）：`DEBUG_UPDATE_URL --es url http://127.0.0.1:8765/update.json`（不帶 url＝改回 GitHub）、
   `DEBUG_UPDATE_CHECK`（跟每天那次一樣會通知）、`DEBUG_UPDATE_APPLY`（等於按更新）；手錶 `DEBUG_INSTALL_FILE --es file t.apk --ei code <版本號>`（不經手機，裝 App 資料夾裡的 APK）。
   本機測試：`python tools/release.py --variant debug --version-code <比裝著的大> --version-name x "--download-base=" --out <資料夾>`，

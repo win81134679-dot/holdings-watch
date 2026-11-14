@@ -14,7 +14,8 @@
   - 自動更新（unit C）：GitHub Releases 的 `update.json`、下載後驗大小／雜湊／套件名／版本／簽章、PackageInstaller；手機經 Data Layer 把 APK 傳給手錶，手錶自己裝。
     手錶經本機伺服器實測 0.2→0.2.1-test 全程不用按（之後已用 adb 降回 0.2）。手錶的安裝權限要用 adb 開一次（`CLAUDE.md`〈自動更新〉）。
 - **還沒驗**：手機自我更新（要使用者先允許「安裝應用程式」）、手機畫面（不准截圖，等使用者看）、每週名單工作是否排進去、走勢圖服務在日盤與週一的時間位移（樣本是週六凌晨夜盤）。
-- **接著要做**：推公開 repo `win81134679-dot/holdings-watch` → 發第一個 Release → 實測從一版更新到下一版；考慮開 R8 縮小 APK（手錶 APK 30 MB，Data Layer 傳一次 3 分多鐘）。
+- **公開**：repo `win81134679-dot/holdings-watch`，Release v0.2（2026-11-14，第一個公開版）。
+- **0.2.1**：release 開 R8，APK 從約 30 MB 縮到約 3 MB（手錶更新從 3 分多鐘變幾十秒）。用它實測從 GitHub 上的一版更新到下一版。
 - adb 埠會變：見 `CLAUDE.md`〈裝到裝置〉。
 
 ## 2026-11-14 第一版完成（v0.1，debug 安裝）

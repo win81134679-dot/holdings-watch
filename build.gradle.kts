@@ -30,6 +30,12 @@ subprojects {
         versionCode = providers.gradleProperty("holdings.versionCode").get().toInt()
         versionName = providers.gradleProperty("holdings.versionName").get()
       }
+      // The watch APK travels phone→watch over Data Layer (~150 KB/s), so release size is update time.
+      buildTypes.getByName("release") {
+        isMinifyEnabled = true
+        isShrinkResources = true
+        proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"))
+      }
       val props = signingProps ?: return@configure
       val release = signingConfigs.create("holdingsRelease") {
         storeFile = file(props.getProperty("storeFile"))
