@@ -14,11 +14,13 @@ val asciiBuildRoot: File? =
     ?.let { File(System.getProperty("user.home"), ".holdings-build") }
 
 // Release key lives outside the repo; without it, builds fall back to the per-machine debug key.
-val signingProps: java.util.Properties? =
+// A relative storeFile is resolved against the properties file, so moving the project folder keeps signing intact.
+val signingPropsFile: File? =
   (findProperty("holdings.signing") as String?)?.let(::file)
     .let { it ?: rootDir.resolve("../signing/keystore.properties") }
     .takeIf { it.isFile }
-    ?.let { f -> java.util.Properties().apply { f.reader(Charsets.UTF_8).use(::load) } }
+val signingProps: java.util.Properties? =
+  signingPropsFile?.let { f -> java.util.Properties().apply { f.reader(Charsets.UTF_8).use(::load) } }
 
 subprojects {
   asciiBuildRoot?.let { root -> layout.buildDirectory.set(File(root, project.name)) }
@@ -38,7 +40,7 @@ subprojects {
       }
       val props = signingProps ?: return@configure
       val release = signingConfigs.create("holdingsRelease") {
-        storeFile = file(props.getProperty("storeFile"))
+        storeFile = signingPropsFile!!.parentFile.resolve(props.getProperty("storeFile"))
         storePassword = props.getProperty("storePassword")
         keyAlias = props.getProperty("keyAlias")
         keyPassword = props.getProperty("keyPassword")

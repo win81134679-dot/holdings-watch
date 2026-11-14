@@ -25,7 +25,7 @@
 
 ## 平台事實
 - 手錶：Pixel Watch 5，Wear OS 7（Android 17，API 37），426×426 圓形，armeabi-v7a。手機：Android（版本未知，≥12）。
-- 平台研究：`..\Pixel Watch 自行開發APP研究.md`。在 Pixel Watch 上做 Tile（不是 Wear Widgets）。
+- 平台研究：repo 外 `..\..\共用研究\Pixel Watch 自行開發APP研究.md`（從 repo 根目錄算）。在 Pixel Watch 上做 Tile（不是 Wear Widgets）。
 - 建置：AGP 9.5.1（內建 Kotlin）、Kotlin 2.4.21、compileSdk/targetSdk 37、Compose BOM 2026.09.00、Wear Compose Material3 1.7.1、Tiles 1.6.2、ProtoLayout Material3 1.4.2、watchface-complications-data-source-ktx 1.3.0、play-services-wearable 20.0.1、WorkManager 2.12.0、Room 2.8.5、DataStore 1.3.0、kotlinx-serialization-json 1.13.0。
 - 手機與手錶是兩支 APK，同一個 applicationId 與簽章時可用 Wearable Data Layer（DataClient／MessageClient）同步。
 - Android 背景限制：WorkManager 週期工作最短 15 分鐘；更密要前景服務。手機發的通知會自動橋接到手錶並震動。
